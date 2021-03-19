@@ -7,8 +7,6 @@ import PostCover from '../../components/PostCover';
 import PostDetail from '../../components/PostDetail';
 import { PostData } from '../../domain/posts/post';
 
-import { Container } from './styles';
-
 interface PostProps {
   post: PostData;
 }
