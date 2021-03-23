@@ -1,7 +1,7 @@
 import Header from '../../components/Header';
 import { PostData } from '../../domain/posts/post';
 import MainContainer from '../../components/MainContainer';
-import { Container } from './styles';
+import { Category, Container } from './styles';
 import PostCard from '../../components/PostCard';
 import Footer from '../../components/Footer';
 import Head from 'next/head';
@@ -9,9 +9,10 @@ import { SITE_NAME } from '../../config/app-config';
 
 export type HomePageProps = {
   posts: PostData[];
+  category?: string;
 };
 
-function HomePage({ posts }: HomePageProps) {
+function HomePage({ posts, category }: HomePageProps) {
   return (
     <>
       <Head>
@@ -20,6 +21,8 @@ function HomePage({ posts }: HomePageProps) {
       </Head>
       <Header />
       <MainContainer>
+        {category && <Category>Categoria: {category}</Category>}
+
         <Container>
           {posts.map((post) => (
             <PostCard
