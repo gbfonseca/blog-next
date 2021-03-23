@@ -1,6 +1,7 @@
 [build]
+  base = ""
+  publish = "build"
   command = "REACT_APP_STAGE=dev npm run build"
-  publish = "out"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
