@@ -27,7 +27,7 @@ function HomePage({ posts, category }: HomePageProps) {
           {posts.map((post) => (
             <PostCard
               key={post.id}
-              cover={post.cover.formats.small.url}
+              cover={post?.cover?.formats?.small?.url}
               slug={post.slug}
               title={post.title}
             ></PostCard>

@@ -36,13 +36,13 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html lang="pt-BR">
+      <Html lang="pt-BR">
         <Head />
         <body>
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
